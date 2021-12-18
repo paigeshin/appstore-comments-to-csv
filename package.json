@@ -1,16 +1,25 @@
 {
   "name": "appstore-comments-to-csv",
   "version": "1.0.0",
-  "description": "",
+  "description": "collect 500 comments from app store and create csv file",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "paige shin",
   "license": "ISC",
   "dependencies": {
     "app-store-scraper": "^0.17.0",
     "csv-writer": "^1.6.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paigeshin/appstore-comments-to-csv.git"
+  },
+  "bugs": {
+    "url": "https://github.com/paigeshin/appstore-comments-to-csv/issues"
+  },
+  "homepage": "https://github.com/paigeshin/appstore-comments-to-csv#readme"
 }

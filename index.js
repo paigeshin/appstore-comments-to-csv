@@ -62,11 +62,11 @@ function createCSVFile(dir, fileName, data) {
     );
 }
 
-async function execute(appId, appName) {
+async function collectAppStoreComments(appId, appName) {
   const recentComments = await generateCommentsJSON(appId, store.sort.RECENT);
   const helpfulComments = await generateCommentsJSON(appId, store.sort.HELPFUL);
   createCSVFile(`./comments/${appName}`, `recents.csv`, recentComments);
   createCSVFile(`./comments/${appName}`, `helpfuls.csv`, helpfulComments);
 }
 
-module.exports = execute;
+module.exports = collectAppStoreComments;
