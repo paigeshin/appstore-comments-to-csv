@@ -16,9 +16,9 @@ npm install appstore-comments-to-csv
 ```jsx
 const collectAppStoreComments = require("appstore-comments-to-csv");
 
-// first argument => App Name
-// second argument => App Id which can be found
-collectAppStoreComments("IAM", 874656917);
+// first argument => App Id
+// second argument => App Name (name of directory which will contain result files)
+collectAppStoreComments(874656917, "IAM");
 ```
 
 ### How to find AppStore App Id?
@@ -26,6 +26,8 @@ collectAppStoreComments("IAM", 874656917);
 ![img1.png](./img1.png)
 
 ![img2.png](./img2.png)
+
+### Output
 
 ![img3.png](./output1.png)
 
