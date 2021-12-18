@@ -26,3 +26,7 @@ collectAppStoreComments("IAM", 874656917);
 ![img1.png](./img1.png)
 
 ![img2.png](./img2.png)
+
+![img3.png](./output1.png)
+
+![img4.png](./output2.png)
