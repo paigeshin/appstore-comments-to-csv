@@ -20,6 +20,12 @@ async function scrapeComments(id, sort, page) {
 }
 
 async function generateCommentsJSON(id, sort) {
+  let newSort;
+  if (sort == "RECENT") {
+    newSort = store.sort.RECENT;
+  } else {
+    newSort = store.sort.HELPFUL;
+  }
   return new Promise(async (resolve, reject) => {
     const comments = [];
     for (i = 1; i <= 10; i++) {
@@ -63,11 +69,13 @@ function createCSVFile(dir, fileName, data) {
 }
 
 async function collectAppStoreComments(appId, appName) {
-  const recentComments = await generateCommentsJSON(appId, store.sort.RECENT);
-  const helpfulComments = await generateCommentsJSON(appId, store.sort.HELPFUL);
+  const recentComments = await generateCommentsJSON(appId, "RECENT");
+  const helpfulComments = await generateCommentsJSON(appId, "HELPFUL");
   createCSVFile(`./comments/${appName}`, `recents.csv`, recentComments);
   createCSVFile(`./comments/${appName}`, `helpfuls.csv`, helpfulComments);
 }
 
-module.exports = collectAppStoreComments;
-module.exports = generateCommentsJSON;
+module.exports = {
+  collectAppStoreComments: collectAppStoreComments,
+  generateCommentsJSON: generateCommentsJSON,
+};
