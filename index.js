@@ -70,3 +70,4 @@ async function collectAppStoreComments(appId, appName) {
 }
 
 module.exports = collectAppStoreComments;
+module.exports = generateCommentsJSON;

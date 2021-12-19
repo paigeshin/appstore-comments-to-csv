@@ -21,6 +21,12 @@ const collectAppStoreComments = require("appstore-comments-to-csv");
 collectAppStoreComments(874656917, "IAM");
 ```
 
+```jsx
+// get json object
+const recentComments = await generateCommentsJSON(appId, store.sort.RECENT);
+const helpfulComments = await generateCommentsJSON(appId, store.sort.HELPFUL);
+```
+
 ### How to find AppStore App Id?
 
 ![img1.png](./img1.png)
