@@ -31,7 +31,7 @@ async function generateCommentsJSON(id, sort) {
     for (i = 1; i <= 10; i++) {
       // id, sort, index
       try {
-        const result = await scrapeComments(id, sort, i);
+        const result = await scrapeComments(id, newSort, i);
         for (comment of result) {
           comments.push(comment);
         }

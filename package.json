@@ -1,6 +1,6 @@
 {
   "name": "appstore-comments-to-csv",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "collect 500 comments from app store and create csv file",
   "main": "index.js",
   "scripts": {
